@@ -11,8 +11,11 @@ export default function Posts() {
   const { posts } = useLoaderData<typeof loader>();
 
   return (
-    <main>
-      <h1>Posts</h1>
+    <main className="px-16 py-12">
+      <Link to="admin" className="text-red-600 underline">
+        Admin
+      </Link>
+      <h1 className="mt-5">Posts</h1>
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
